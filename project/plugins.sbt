@@ -30,3 +30,6 @@ addSbtPlugin("com.simplytyped" % "sbt-antlr4" % "0.7.11")
 // the plugin; this is tracked at SPARK-14401.
 
 addSbtPlugin("org.spark-project" % "sbt-pom-reader" % "1.0.0-spark")
+
+
+addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.3")

@@ -55,6 +55,11 @@ object Main extends Logging {
 
   // Visible for testing
   private[repl] def doMain(args: Array[String], _interp: SparkILoop): Unit = {
+
+    args.foreach(println)
+    if (conf.getOption("spark.master").isDefined) println("master:",conf.get("spark.master"))
+    else println("master unset")
+
     interp = _interp
     val jars = Utils.getUserJars(conf, isShell = true).mkString(File.pathSeparator)
     val interpArguments = List(
